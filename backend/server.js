@@ -3,9 +3,11 @@ require('dotenv').config()
 const app = express()
 const PORT = process.env.PORT
 const mongoose = require('mongoose')
+const cors = require('cors')
 const workoutRoutes = require('./routes/workouts')
 
 
+app.use(cors())
 app.use(express.json())
 app.use('/api/workouts', workoutRoutes)
 
