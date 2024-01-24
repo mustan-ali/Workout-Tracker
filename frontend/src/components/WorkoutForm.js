@@ -12,7 +12,7 @@ const WorkoutForm = () => {
 
         const workout = { title, weight, reps }
 
-        const res = await fetch('http://localhost:4000/api/workouts', {
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(workout)

@@ -12,7 +12,7 @@ const EditWorkout = (workout) => {
 
     useEffect(() => {
         const fetchWorkout = async () => {
-            const res = await fetch(`http://localhost:4000/api/workouts/${id}`)
+            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/${id}`)
             const data = await res.json()
 
             setTitle(data.title)
@@ -28,7 +28,7 @@ const EditWorkout = (workout) => {
 
         const workout = { title, weight, reps }
 
-        const res = await fetch(`http://localhost:4000/api/workouts/${id}`, {
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/${id}`, {
             method: 'PATCH',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(workout)

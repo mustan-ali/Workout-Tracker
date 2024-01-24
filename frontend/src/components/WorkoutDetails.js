@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const WorkoutDetails = ({ workout }) => {
 
     const handleClick = async () => {
-        await fetch('http://localhost:4000/api/workouts/' + workout._id, { method: 'DELETE' })
+        await fetch(`${process.env.REACT_APP_BACKEND_URL}/${workout._id}`, { method: 'DELETE' })
     }
 
     return (

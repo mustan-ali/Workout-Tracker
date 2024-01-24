@@ -8,7 +8,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchWorkouts = async () => {
-            const res = await fetch('http://localhost:4000/api/workouts')
+            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}`)
             const data = await res.json()
 
             console.log(data)
