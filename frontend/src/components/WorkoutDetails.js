@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const WorkoutDetails = ({ workout }) => {
 
     const handleClick = async () => {
@@ -11,6 +13,7 @@ const WorkoutDetails = ({ workout }) => {
             <p><strong>Number of reps: </strong>{workout.reps}</p>
             <p><strong>Date Created: </strong>{workout.createdAt}</p>
             <span onClick={handleClick}>Delete</span>
+            <Link to={`/edit/${workout._id}`}><span>Edit</span></Link>
         </div>
     )
 }

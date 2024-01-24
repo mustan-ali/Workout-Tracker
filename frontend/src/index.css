@@ -70,7 +70,13 @@ header a {
   background: #f1f1f1;
   padding: 6px;
   border-radius: 4px;
+  width: 50px;
+  text-align: center;
   color: #333;
+}
+
+.workout-details span:last-child {
+  top: 65px;
 }
 
 label,
