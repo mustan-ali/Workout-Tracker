@@ -31,8 +31,9 @@
     npm start
     ```
 
+---
 <details>
-<summary><h2>Screenshot</h2></summary>
+<summary><b>Screenshot</b></summary>
 <img src='./screenshot/Home.png' title="Home Page" /><br>
 <img src='./screenshot/EditWorkout.png' title="Edit Workout Page" />
 </details>
